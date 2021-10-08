@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/menuscreen"
+    tools:context=".MenuActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="60dp"
+        android:layout_marginTop="60dp">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/govermentiv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/govern"
+                android:layout_marginTop="30dp"/>
+
+            <ImageView
+                android:id="@+id/semigovermentiv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/semgov"
+                android:layout_below="@+id/govermentiv"/>
+
+            <ImageView
+                android:id="@+id/privateiv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/semigovermentiv"
+                app:srcCompat="@drawable/privateicon" />
+
+            <ImageView
+                android:id="@+id/scholarshipsiv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/scholarships"
+                android:layout_below="@+id/privateiv"/>
+
+            <ImageView
+                android:id="@+id/internationaliv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/international"
+                android:layout_below="@+id/scholarshipsiv"/>
+
+            <ImageView
+                android:id="@+id/diplomaiv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/diploma"
+                android:layout_below="@+id/internationaliv"/>
+
+            <ImageView
+                android:id="@+id/nvqiv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/nvq"
+                android:layout_below="@+id/diplomaiv"/>
+
+            <ImageView
+                android:id="@+id/otheriv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/other"
+                android:layout_below="@+id/nvqiv"/>
+
+    </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottom_app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:hideOnScroll="true"
+        android:isScrollContainer="false"
+        app:fabCradleMargin="10dp"
+        app:fabCradleRoundedCornerRadius="20dp"
+        app:fabCradleVerticalOffset="10dp">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation01"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@android:color/transparent"
+            app:itemIconTint="@color/maincolour"
+            app:itemTextColor="@color/maincolour"
+            app:menu="@menu/bottom_nav_menu" />
+
+
+    </com.google.android.material.bottomappbar.BottomAppBar>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/home_fabtn04"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="TODO"
+        android:src="@drawable/ic_home"
+        app:backgroundTint="@color/maincolour"
+        app:layout_anchor="@id/bottom_app_bar"
+        app:layout_anchorGravity="top|center"
+        app:maxImageSize="50dp" />
+
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

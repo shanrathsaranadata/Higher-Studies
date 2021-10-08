@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CoursesActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/Courses_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Courses"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/maincolour"
+            android:textSize="30dp"
+            android:textStyle="bold"/>
+
+        <Spinner
+            android:id="@+id/major_spinner_courses"
+            android:layout_width="210dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/Courses_title"
+            android:layout_height="wrap_content"
+            android:spinnerMode="dropdown" />
+
+        <Spinner
+            android:id="@+id/type_spinner_courses"
+            android:layout_width="210dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/Courses_title"
+            android:spinnerMode="dropdown"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true" />
+
+        <EditText
+            android:id="@+id/search_bar_courses"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/type_spinner_courses"
+            android:autofillHints=""
+            android:background="@drawable/searchbar"
+            android:paddingLeft="50dp"
+            android:inputType="textPersonName"
+            tools:ignore="LabelFor,RtlSymmetry" />
+
+        <ImageView
+            android:id="@+id/search_bar_coursesbtniv"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="20dp"
+            android:layout_below="@+id/type_spinner_courses"
+            android:src="@drawable/ic_search"
+            android:layout_alignParentRight="true"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+
+            android:id="@+id/recyclerCourses"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/search_bar_courses"
+            android:layout_marginBottom="60dp"
+            tools:ignore="NotSibling">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </RelativeLayout>
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottom_app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:hideOnScroll="true"
+        app:fabCradleMargin="10dp"
+        app:fabCradleRoundedCornerRadius="20dp"
+        app:fabCradleVerticalOffset="10dp">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation09"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@android:color/transparent"
+            app:itemIconTint="@color/maincolour"
+            app:itemTextColor="@color/maincolour"
+            app:menu="@menu/bottom_nav_menu" />
+
+
+    </com.google.android.material.bottomappbar.BottomAppBar>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/home_fabtn09"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="TODO"
+        android:src="@drawable/ic_home"
+        app:backgroundTint="@color/maincolour"
+        app:layout_anchor="@id/bottom_app_bar"
+        app:layout_anchorGravity="top|center"
+        app:maxImageSize="50dp" />
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

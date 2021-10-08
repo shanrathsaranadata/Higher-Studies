@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Higher Studies</string>
+    <string name="title_activity_home">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="email">Email</string>
+    <string name="login">Login</string>
+    <string name="name">Name</string>
+    <string name="mobile_no">Mobile No</string>
+    <string name="address">Address</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="university_name">University Name</string>
+    <string name="university_rating">University Rating</string>
+    <string name="todo">TODO</string>
+    <string name="courses_name">Courses Name</string>
+    <string name="courses_rating">Courses Rating</string>
+</resources>

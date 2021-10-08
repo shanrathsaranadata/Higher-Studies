@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/profile"
+    tools:context=".ProfileActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="100dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_image"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/profile_picture"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:id="@+id/editprofiletv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/profile_image"
+            android:text="Edit Profile"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            android:textColor="@color/maincolour"
+            android:textSize="20dp"
+            android:layout_centerHorizontal="true"/>
+        <TextView
+            android:id="@+id/signouttv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/editprofiletv"
+            android:text="Signout"
+            android:textStyle="bold"
+            android:textColor="@color/maincolour"
+            android:textSize="20dp"
+            android:layout_centerHorizontal="true"/>
+
+        <EditText
+            android:layout_marginTop="10dp"
+            android:id="@+id/profile_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/signouttv"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/namepf"
+            android:paddingTop="30dp"
+            android:paddingLeft="30dp"
+            android:ems="10"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:id="@+id/profile_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/profile_name"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/emailpf"
+            android:paddingTop="30dp"
+            android:paddingLeft="30dp"
+            android:textSize="20dp"
+            android:textColor="@color/maincolour"
+            android:ems="10"
+            android:inputType="textEmailAddress" />
+
+        <EditText
+            android:layout_marginTop="10dp"
+            android:id="@+id/profile_phoneno"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/profile_email"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/mobileno"
+            android:paddingTop="30dp"
+            android:paddingLeft="30dp"
+            android:ems="10"
+            android:inputType="numberDecimal" />
+
+        <EditText
+            android:layout_marginTop="10dp"
+            android:id="@+id/profile_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/profile_phoneno"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/addresspf"
+            android:paddingTop="30dp"
+            android:paddingLeft="30dp"
+            android:ems="10"
+            android:inputType="textPostalAddress" />
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:id="@+id/profile_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/profile_address"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/passwordpf"
+            android:paddingTop="30dp"
+            android:textSize="20dp"
+            android:textColor="@color/maincolour"
+            android:paddingLeft="30dp"
+            android:ems="10"
+            android:inputType="textPostalAddress" />
+
+        <Button
+            android:id="@+id/profile_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/profile_password"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/savebutton"
+            android:ems="10"
+            app:backgroundTint="#FFFFFF"
+            app:backgroundTintMode="multiply" />
+
+    </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottom_app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:hideOnScroll="true"
+        app:fabCradleMargin="10dp"
+        app:fabCradleRoundedCornerRadius="20dp"
+        app:fabCradleVerticalOffset="10dp">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation04"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@android:color/transparent"
+            app:itemIconTint="@color/maincolour"
+            app:itemTextColor="@color/maincolour"
+            app:menu="@menu/bottom_nav_menu" />
+
+
+    </com.google.android.material.bottomappbar.BottomAppBar>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/home_fabtn06"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="TODO"
+        android:src="@drawable/ic_home"
+        app:backgroundTint="@color/maincolour"
+        app:layout_anchor="@id/bottom_app_bar"
+        app:layout_anchorGravity="top|center"
+        app:maxImageSize="50dp" />
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

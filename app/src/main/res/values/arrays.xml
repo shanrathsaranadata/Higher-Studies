@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="major">
+        <item>Select Your Major</item>
+        <item>Engineering</item>
+        <item>Arts</item>
+        <item>Commerce</item>
+        <item>Management</item>
+        <item>Physical</item>
+        <item>Law</item>
+        <item>Aviation</item>
+    </string-array>
+
+    <string-array name="type">
+        <item>Select Your Type</item>
+        <item>Government</item>
+        <item>Private</item>
+        <item>Semi-Government</item>
+        <item>Scholarship</item>
+        <item>International</item>
+        <item>Diploma</item>
+        <item>NVQ</item>
+        <item>Others</item>
+    </string-array>
+
+</resources>
